@@ -19,5 +19,6 @@ services:
       environment:
         VIRTUAL_HOST: shivamnaik.de
         LETSENCRYPT_HOST: shivamnaik.de
+        LETSENCRYPT_EMAIL: "ichbinshivamsnaik@outlook.com"
         VIRTUAL_PORT: 3000
 
