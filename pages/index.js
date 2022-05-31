@@ -1,18 +1,26 @@
-import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Navbar from '../components/Navbar'
 
 export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    return (
+        <div style={{ backgroundColor: "white" }} className={styles.container}>
+          <body style={{flex: "10"}}>
+            <Navbar/>
+            <div className={styles.page_content}>
+              <p>Helloworld</p>
+            </div>
+          </body>
+          <footer style={{flex: "1"}} className={styles.footer}>
+              Made with
+              <img src="/heart.svg" alt="Vercel Logo" className={styles.logo} />&ensp; in Deutschland
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
+          </footer>
+            
+          
+            {/* <main className={styles.main}>
+        <p className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js</a> on Docker!
-        </h1>
+        </p>
 
         <p className={styles.description}>
           Get started by editing{' '}
@@ -49,17 +57,7 @@ export default function Home() {
           </a>
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+ */}
+        </div>
+    )
 }

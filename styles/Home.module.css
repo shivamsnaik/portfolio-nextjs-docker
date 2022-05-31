@@ -1,11 +1,23 @@
 .container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  top: 0;
+  min-height: 100vh;
+  padding:  0;
 }
+
+.page_content{
+  max-width: calc(1020px - (30px * 2));
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  position: relative;
+}
+
+.page_content *{
+  padding: 0px 4px 0 4px;
+}
+
 
 .main {
   padding: 5rem 0;
