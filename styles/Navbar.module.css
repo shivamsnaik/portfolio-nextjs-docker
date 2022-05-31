@@ -2,10 +2,13 @@
     position: sticky;
     z-index: 40;
     min-height: 20px;
-    background-color: whitesmoke;
+    background-color: white;
+    border-style: none none solid none;
+    border-color: #f1f1f1;
+    border-width: 1px;
 }
 .navbar .content{
-    padding: 0 4px 0 4px;
+    padding: 0 20px 0 20px;
     margin-left: auto;
     margin-right: auto;
     max-width: calc(1020px - (30px * 2));
