@@ -1,6 +1,18 @@
 import styles from '../styles/Navbar.module.css'
-
+import button, { useEffect, useState } from 'react'
 export default function Navbar({ children }) {
+
+    const [menu_toggle, toggleMenu] = useState(false)
+
+    useEffect(()=> {
+
+    });
+
+    function menuClick(e) {
+        e.preventDefault();
+        toggleMenu(!menu_toggle)
+        console.log("Button Clicked")
+    }
 
     return ( 
         <div className={styles.navbar}>
@@ -11,14 +23,12 @@ export default function Navbar({ children }) {
                     </div>
                 </div>
                 <div className={`${styles.navbar_links}`}>
-                    <div style={{display: "flex", padding: "0 4px 0 4px"}}>
-                        <img src="/menu-button.svg" alt="Menu" className={styles.logo}/>
-                        <div className={styles.link_items}>
-                            <a href="">Academics</a>
-                            <a href="">Work</a>
-                            <a href="">About</a>
-                            <a href="">Resume</a>
-                        </div>
+                    <button onClick={menuClick} style={{padding:"5px"}} className={styles.logo}><img src="/menu-button.svg" alt="Menu" className={styles.logoimg}/></button>
+                    <div className={styles.link_items} style={{display: menu_toggle?'flex':'none'}}>
+                        <div><a href="">Academics</a></div>
+                        <div><a href="">Work</a></div>
+                        <div><a href="">About</a></div>
+                        <div><a href="">Resume</a></div>
                     </div>
                     
                 </div>

@@ -4,12 +4,12 @@ import Navbar from '../components/Navbar'
 export default function Home() {
     return (
         <div style={{ backgroundColor: "white" }} className={styles.container}>
-          <body style={{flex: "1"}}>
+          <div style={{flex: "1"}}>
             <Navbar/>
             <div className={styles.page_content}>
-              <p>Helloworld</p>
+              <p>Welcome to my page</p>
             </div>
-          </body>
+          </div>
           <footer className={styles.footer}>
               Made with
               <img src="/heart.svg" alt="Vercel Logo" className={styles.logo} />&ensp; in Deutschland
