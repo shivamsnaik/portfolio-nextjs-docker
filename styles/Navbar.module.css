@@ -49,13 +49,24 @@
     align-items: center;
 }
 
-.navbar .navbar_links .link_items a {
-    padding: 0 10px;
+.navbar .navbar_links :is(.link_items, .link_items_toggled){
+    flex: 1;
+    display:flex; 
+    justify-content:flex-end;
+    align-items: center;
 }
 
-.navbar .navbar_links .link_items div:hover {
-    background-color: #f1f1f1;
+.navbar .navbar_links :is(.link_items, .link_items_toggled) div {
+    padding: 0 10px;
+    flex:1;
+    height: 100%
 }
+
+.navbar .navbar_links :is(.link_items, .link_items_toggled) div:hover {
+    background-color: #f1f1f1;
+    cursor:pointer;
+}
+
 
 @media (max-width: 600px) {
     .navbar .navbar_links .logo{
@@ -68,7 +79,7 @@
         top: 50px;
     }
 
-    .navbar .navbar_links .link_items div {
+    .navbar .navbar_links :is(.link_items, .link_items_toggled) div {
         padding: 10px;
         width: 100%;
         display: flex;
@@ -77,4 +88,17 @@
         border-width: 1px;
         border-style: none none solid none;
     }
+
+    .navbar .navbar_links :is(.link_items, .link_items_toggled) div:hover {
+        background-color: #f1f1f1;
+        cursor:pointer;
+    }
+
+    .navbar .navbar_links .link_items_toggled{
+        display:flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+    }
   }
+
