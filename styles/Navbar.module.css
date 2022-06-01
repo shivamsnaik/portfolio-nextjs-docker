@@ -27,6 +27,11 @@
     justify-content:flex-start;
     align-items: center;
 }
+
+.navbar .navbar_menus .menu_items a{
+    padding: 10px 0 10px 0;
+}
+
 .navbar .navbar_links {
     flex: 1;
     display:flex;
@@ -92,7 +97,8 @@
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 50px;
+        top: 38px;
+        right: 0;
         height: unset;
     }
 
@@ -100,12 +106,12 @@
         display:flex;
         flex-direction: column;
         position: absolute;
-        top: 50px;
+        top: 38px;
+        right: 0;
         height: unset;
     }
 
     .navbar .navbar_links :is(.link_items, .link_items_toggled) nav {
-        top: 50;
         padding: 10px;
         width: 100%;
         display: flex;

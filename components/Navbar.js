@@ -14,6 +14,7 @@ export default function Navbar(props) {
         console.log("Button Clicked")
     };
 
+
     const listNavbarItems = props.navbar_list.map((list_item) => 
         <nav><Link href={list_item[1]} className={`flex-grow ${styles.navlink_item}`}>{list_item[0]}</Link></nav>
     )
@@ -23,7 +24,7 @@ export default function Navbar(props) {
             <div className={styles.content}>
                 <div className={styles.navbar_menus}>
                     <div className={`site-title accent-font lightgrey-on-hover ${styles.menu_items}`}>
-                        <p>Shivam Naik</p>
+                        <Link href="/">Shivam Naik</Link>
                     </div>
                 </div>
                 <div className={`${styles.navbar_links}`}>
