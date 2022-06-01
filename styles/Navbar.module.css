@@ -16,7 +16,7 @@
     flex-direction:row;
 }
 .navbar .navbar_menus {
-    flex: 2;
+    flex: 10;
     display:flex;
     justify-content:center;
     align-items: stretch;
@@ -44,7 +44,7 @@
   }
 
 .navbar .navbar_links .logo .logoimg {
-    height: 1em;
+    height:15px;
   }
 
 .navbar .navbar_links {
@@ -90,9 +90,19 @@
 
 
 @media (max-width: 600px) {
+
     .navbar .navbar_links .logo{
         display: flex;
+        background-color: white;
+        border-width: 0;
+        border-radius: 2px;
+        cursor: pointer;
     }
+
+    .navbar .navbar_links .logo:active{
+        background-color: #f1f1f1;;
+    }
+
     .navbar .navbar_links .link_items{
         display: none;
         flex-direction: column;
