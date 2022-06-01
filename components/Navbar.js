@@ -1,5 +1,6 @@
 import styles from '../styles/Navbar.module.css'
 import button, { useEffect, useState } from 'react'
+import Link from 'next/link'
 export default function Navbar({ children }) {
 
     const [init_status, setAppStartStatus] = useState(true)
@@ -15,6 +16,8 @@ export default function Navbar({ children }) {
 
     function navMenuClicked(e){
         e.preventDefault();
+        e.currentTarget.c
+        e.currentTarget.classList.toggle(styles.link_selected)
         console.log('Menu Button Clicked')
     };
 
@@ -29,10 +32,10 @@ export default function Navbar({ children }) {
                 <div className={`${styles.navbar_links}`}>
                     <button onClick={menuClick} style={{padding:"5px"}} className={styles.logo}><img src="/menu-button.svg" alt="Menu" className={styles.logoimg}/></button>
                     <div className={menu_toggle?styles.link_items:styles.link_items_toggled}>
-                        <div onClick={navMenuClicked}><p>Academics</p></div>
-                        <div onClick={navMenuClicked}><p>Work</p></div>
-                        <div onClick={navMenuClicked}><p>About</p></div>
-                        <div onClick={navMenuClicked}><p>Resume</p></div>
+                        <nav><Link href="/academics" className={`flex-grow ${styles.navlink_item}`}>Academics</Link></nav>
+                        <nav><Link href="/work" className={styles.navlink_item}>Work</Link></nav>
+                        <nav><Link href="/about" className={styles.navlink_item}>About</Link></nav>
+                        <nav><Link href="/resume" className={styles.navlink_item}>Resume</Link></nav>
                     </div>
                 </div>
             </div>

@@ -7,7 +7,8 @@ export default function Home() {
           <div style={{flex: "1"}}>
             <Navbar/>
             <div className={styles.page_content}>
-              <p>Welcome to my page</p>
+              <p style={{fontSize: "2.5rem", fontWeight: "bold"}}>Hello, I'm Shivam Naik!</p>
+              <p style={{fontSize: "2rem"}}>A master student at TU Kaiserslautern.</p>
             </div>
           </div>
           <footer className={styles.footer}>
