@@ -5,7 +5,8 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-a {
+:is(a, p) {
+  font-size: 15pt;
   color: inherit;
   text-decoration: none;
 }

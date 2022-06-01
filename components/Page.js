@@ -19,8 +19,8 @@ const Page = ({children}) => {
           </div>
         </div>
         <footer className={styles.footer}>
-            Made with
-            <img src="/heart.svg" alt="Vercel Logo" className={styles.logo} />&ensp; in Deutschland
+            <p>Made with</p>
+            <img src="/heart.svg" alt="Vercel Logo" className={styles.logo} />&ensp; <p>in Deutschland</p>
 
         </footer>
       </div>

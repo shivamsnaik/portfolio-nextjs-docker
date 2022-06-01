@@ -14,7 +14,7 @@ export default function Navbar(props) {
         console.log("Button Clicked")
     };
 
-
+    // Map to dynamically populate navigation links based on received props
     const listNavbarItems = props.navbar_list.map((list_item) => 
         <nav><Link href={list_item[1]} className={`flex-grow ${styles.navlink_item}`}>{list_item[0]}</Link></nav>
     )
