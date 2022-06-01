@@ -7,8 +7,9 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>Shivam Naik's Portfolio</title>
-        <link href="https://fonts.googleapis.com/css?family=Playfair+Display&amp;display=swap" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400&amp;display=swap" rel="stylesheet"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>  
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet"/> 
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Component {...pageProps} />
