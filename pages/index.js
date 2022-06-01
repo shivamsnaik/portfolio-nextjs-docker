@@ -1,22 +1,13 @@
-import styles from '../styles/Home.module.css'
+import Page from "../components/Page"
 import Navbar from '../components/Navbar'
 
 export default function Home() {
     return (
-        <div style={{ backgroundColor: "white" }} className={styles.container}>
-          <div style={{flex: "1"}}>
-            <Navbar/>
-            <div className={styles.page_content}>
-              <p style={{fontSize: "2.5rem", fontWeight: "bold"}}>Hello, I'm Shivam Naik!</p>
-              <p style={{fontSize: "2rem"}}>A master student at TU Kaiserslautern.</p>
-            </div>
-          </div>
-          <footer className={styles.footer}>
-              Made with
-              <img src="/heart.svg" alt="Vercel Logo" className={styles.logo} />&ensp; in Deutschland
-
-          </footer>
-            
+          <Page>
+            <p style={{fontSize: "2.5rem", fontWeight: "bold"}}>Hello, I'm Shivam Naik!</p>
+            <p style={{fontSize: "2rem"}}>A master student at TU Kaiserslautern.</p>
+          </Page>
+    );
           
             {/* <main className={styles.main}>
         <p className={styles.title}>
@@ -59,6 +50,4 @@ export default function Home() {
         </div>
       </main>
  */}
-        </div>
-    )
-}
+};
