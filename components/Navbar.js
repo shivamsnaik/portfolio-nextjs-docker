@@ -1,7 +1,6 @@
 import styles from '../styles/Navbar.module.scss'
 import button, { useEffect, useState } from 'react'
 import Link from 'next/link'
-import PropTypes from 'prop-types'
 
 export default function Navbar({title, navbar_list, ...props}) {
 
@@ -38,9 +37,4 @@ export default function Navbar({title, navbar_list, ...props}) {
             </div>
         </div>
     );
-}
-
-Navbar.propTypes = {
-    title: PropTypes.string,
-    navbar_list: PropTypes.array
-}
+};

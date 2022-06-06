@@ -11,16 +11,19 @@ const Page = ({children}) => {
   ];
   
   return(
-      <div style={{ backgroundColor: "white" }} className={styles.container}>
-        <div style={{flex: "1"}}>
+      <div className={styles.container}>
+        <div className={styles.sub_container}>
           <Navbar title="Shivam Naik" navbar_list = {navbar_list}/>
-          <div className={styles.page_content}>
-            {children}
+          <div className={styles.content_wrapper}>
+            <div className={styles.page_content}>
+              {children}
+            </div>
           </div>
+          
         </div>
         <footer className={styles.footer}>
             <p>Made with</p>
-            <img src="/heart.svg" alt="Vercel Logo" className={styles.logo} />&ensp; <p>in Deutschland</p>
+            <img src="/heart.svg" alt="Vercel Logo" className={styles.logo} />&ensp; <p>by Shivam Naik</p>
 
         </footer>
       </div>

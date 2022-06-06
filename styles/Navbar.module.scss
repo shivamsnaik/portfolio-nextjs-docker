@@ -12,6 +12,9 @@ $hover-color: #f1f1f1;
     border-style: none none solid none;
     border-color: $border-color;
     border-width: 1px;
+    display: flex;
+    flex: 1;
+    flex-grow: 0;
 
     & .content{
         padding: 0 20px 0 20px;
@@ -19,6 +22,7 @@ $hover-color: #f1f1f1;
         margin-right: auto;
         max-width: $max-width-calculation;
         display: flex;
+        flex: 1;
         flex-direction:row;
     }
 
