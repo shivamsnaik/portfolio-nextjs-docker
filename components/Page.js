@@ -4,16 +4,14 @@ import styles from '../styles/Page.module.scss'
 const Page = ({children}) => {
 
   const navbar_list = [
-    ["Academics","/academics"],
-    ["Work", "/work"],
+    
     ["About", "/about"],
-    ["Resume", "/resume"]
   ];
   
   return(
       <div className={styles.container}>
         <div className={styles.sub_container}>
-          <Navbar title="Shivam Naik" navbar_list = {navbar_list}/>
+          <Navbar title="PfaffHack" navbar_list = {navbar_list}/>
           <div className={styles.content_wrapper}>
             <div className={styles.page_content}>
               {children}
@@ -21,11 +19,11 @@ const Page = ({children}) => {
           </div>
           
         </div>
-        <footer className={styles.footer}>
+        {/*<footer className={styles.footer}>
             <p>Made with</p>
             <img src="/heart.svg" alt="Vercel Logo" className={styles.logo} />&ensp; <p>by Shivam Naik</p>
 
-        </footer>
+        </footer>*/}
       </div>
   );
 };
