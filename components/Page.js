@@ -4,10 +4,8 @@ import styles from '../styles/Page.module.scss'
 const Page = ({children}) => {
 
   const navbar_list = [
-    ["Academics","/academics"],
-    ["Work", "/work"],
+    
     ["About", "/about"],
-    ["Resume", "/resume"]
   ];
   
   return(
@@ -21,11 +19,11 @@ const Page = ({children}) => {
           </div>
           
         </div>
-        <footer className={styles.footer}>
+        {/*<footer className={styles.footer}>
             <p>Made with</p>
             <img src="/heart.svg" alt="Vercel Logo" className={styles.logo} />&ensp; <p>by Shivam Naik</p>
 
-        </footer>
+        </footer>*/}
       </div>
   );
 };
