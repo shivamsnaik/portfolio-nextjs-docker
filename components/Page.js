@@ -13,7 +13,7 @@ const Page = ({children}) => {
   return(
       <div className={styles.container}>
         <div className={styles.sub_container}>
-          <Navbar title="Shivam Naik" navbar_list = {navbar_list}/>
+          <Navbar title="PfaffHack" navbar_list = {navbar_list}/>
           <div className={styles.content_wrapper}>
             <div className={styles.page_content}>
               {children}
