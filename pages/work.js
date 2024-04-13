@@ -1,6 +1,6 @@
 import Page from "../components/Page";
 
-const Academics = () => {
+const WorkExperience = () => {
 
     return(
         <Page>
@@ -8,5 +8,4 @@ const Academics = () => {
         </Page>
     );
 }
-
-export default Academics;
+export default WorkExperience;

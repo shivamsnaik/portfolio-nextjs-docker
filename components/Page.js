@@ -6,8 +6,7 @@ const Page = ({children}) => {
   const navbar_list = [
     ["Academics","/academics"],
     ["Work", "/work"],
-    ["About", "/about"],
-    ["Resume", "/resume"]
+    ["Projects", "/projects"],
   ];
   
   return(
