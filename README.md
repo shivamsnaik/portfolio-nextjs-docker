@@ -24,6 +24,10 @@ This project is built using Next.js framework and containerized using Docker.
     LETSENCRYPT_HOST: portfolio.example.com
     LETSENCRYPT_EMAIL: user@example.com
     ```
+## Running on Production
+1. Build the latest Docker image: ```docker-compose build```
+2. Deploy the container using build image: ```docker-compose up -d```
+
 ## Running Locally
 
 First, run the development server:
