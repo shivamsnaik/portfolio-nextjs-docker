@@ -1,0 +1,16 @@
+.chatbotWindow{
+    display: "flex";
+    flex-direction: "column-reverse";
+    background-color: cadetblue;
+
+    & .chatbot-contents{
+        margin: 20px;
+        height: "100%";
+        flex: 1;
+        padding: "10px";
+        display: "flex";
+        align-items: "flex-end";
+        flex-direction: "column";
+        background-color: "white";
+    }
+}

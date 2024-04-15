@@ -7,7 +7,7 @@ const Projects = () => {
         <Page>
             <h1>Projects</h1>
             <div>
-                <Chatbot/>
+                <Chatbot radius="5"/>
             </div>
         </Page>
     );

@@ -3,6 +3,8 @@ import { useState, useEffect } from "react"
 import { PromptTemplate } from "@langchain/core/prompts"
 import { ChatOpenAI } from "@langchain/openai";
 import { HumanMessage } from "@langchain/core/messages";
+import styles from "../styles/Chatbot.module.scss";
+import window_color from "../constants/global_style";
 
 const Chatbot = (props) => {
     const [messages, appendMessages] = useState([])
@@ -52,30 +54,12 @@ const Chatbot = (props) => {
     return (
         <div
             id="chatbot-window"
-            style={{
-                display: "flex",
-                flexDirection: "column-reverse",
-                padding: `
-                ${props.paddingTop}px
-                ${props.paddingRight}px 
-                ${props.paddingBottom}px 
-                ${props.paddingLeft}px`,
-                backgroundColor: `${props.backgroundColor}`,
-                width: `100%`,
-                height: "100%",
-                borderRadius: `${props.radius}px`,
-            }}
+            className={styles.chatbotWindow}
+            style={chatWindowStyle}
         >
             <div
-                id="contents"
+                id="chatbot-contents"
                 style={{
-                    height: "100%",
-                    flex: 1,
-                    padding: "10px",
-                    display: "flex",
-                    alignItems: "flex-end",
-                    flexDirection: "column",
-                    backgroundColor: "white",
                     borderRadius: `${props.radius}px`,
                 }}
             >
@@ -243,6 +227,10 @@ const buttonStyle = {
     fontFamily: "urbanist",
     padding: "5px",
     border: "5px solid transparent",
+}
+
+const chatWindowStyle = {
+    backgroundColor: window_color
 }
 
 export default Chatbot;
