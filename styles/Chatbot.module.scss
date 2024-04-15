@@ -95,7 +95,7 @@ $border: 3px solid white;
 
            & .chatInputs{
                 & .chatForm {
-                    input[type='text']{
+                    & .chatInput{
                         font-size: 16px;
                     }
                 }
