@@ -1,16 +1,56 @@
+$chat-window-background: white;
 .chatbotWindow{
-    display: "flex";
-    flex-direction: "column-reverse";
-    background-color: cadetblue;
+    display: flex;
+    flex-direction: row;
+    background-color: $chat-window-background;
+    flex: 1;
+    max-height: 500px;
+    padding: 20px;
 
-    & .chatbot-contents{
-        margin: 20px;
-        height: "100%";
-        flex: 1;
-        padding: "10px";
-        display: "flex";
-        align-items: "flex-end";
-        flex-direction: "column";
-        background-color: "white";
+
+    & .chatbotContents{
+        border: 1px solid white;
+        height: 100%;
+        flex: 4 1;
+        flex-direction: column;
+        padding: 10px;
+        display: flex;
+        align-items: flex-end;
+        background-color: black;
+    }
+
+    & .chatbotTypes{
+        border: 1px solid white;
+        display: flex;
+        flex: 1 1;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 10px;
+
+        & .btn{
+            margin:10px;
+            padding: 10px 20px 10px 20px;
+        }
+    }
+}
+
+@media (max-width: 810px) {
+    .chatbotWindow{
+        flex-direction: column;
+        & .chatbotTypes{
+            flex: 0;
+            flex-direction: row;
+
+            & .btn{
+                margin:10px;
+                padding: 5px 20px 5px 20px;
+            }
+        }
+
+        & .chatbotContents{
+           :is(p){
+                font-size: small;
+           }
+        }
     }
 }

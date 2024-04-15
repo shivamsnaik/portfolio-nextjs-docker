@@ -49,6 +49,15 @@ const Chatbot = (props) => {
         }
     }
 
+    /*
+    STYLE OBJECTS
+    */
+
+    const chatWindowStyle = {
+        backgroundColor: window_color,
+        borderRadius: `${props.radius}px`
+    }
+
     useEffect(() => {}, [messages])
 
     return (
@@ -57,42 +66,34 @@ const Chatbot = (props) => {
             className={styles.chatbotWindow}
             style={chatWindowStyle}
         >
-            <div
-                id="chatbot-contents"
-                style={{
-                    borderRadius: `${props.radius}px`,
-                }}
-            >
-                <div
-                    style={{
-                        display: "grid",
-                        gridTemplateColumns: "repeat(3, 1fr)",
-                        padding: "10px",
-                        gap: "20px",
-                        width: "100%",
-                    }}
+            <div id="chatbot-types" className={styles.chatbotTypes} style={{borderRadius: `${props.radius}px`}}
                 >
                     <button
                         id="mean-gpt"
+                        className={styles.btn}
                         style={{
                             borderRadius: `${props.radius}px`,
                             fontSize: `${props.fontSize}px`,
-                            ...buttonStyle,
                         }}
                     >
                         MeanGPT
                     </button>
                     <button
                         id="job-search-gpt"
+                        className={styles.btn}
                         style={{
                             borderRadius: `${props.radius}px`,
                             fontSize: `${props.fontSize}px`,
-                            ...buttonStyle,
                         }}
                     >
                         Job Search GPT
                     </button>
-                </div>
+            </div>
+            <div
+                id="chatbot-contents"
+                className={styles.chatbotContents}
+                style={{borderRadius: `${props.radius}px`,}}
+            >
                 <div
                     id="chat-bubbles"
                     style={{
@@ -204,7 +205,6 @@ const Chatbot = (props) => {
                                 flex: 0,
                                 borderRadius: `${props.radius}px`,
                                 fontSize: `${props.fontSize}px`,
-                                ...buttonStyle,
                             }}
                             className="btn3"
                             type="submit"
@@ -214,6 +214,7 @@ const Chatbot = (props) => {
                     </form>
                 </div>
             </div>
+
         </div>
     )
 }
@@ -222,15 +223,5 @@ const Chatbot = (props) => {
 // Learn more: https://reactjs.org/docs/dom-elements.html#style
 
 Chatbot.displayName = "Chatbot Window"
-
-const buttonStyle = {
-    fontFamily: "urbanist",
-    padding: "5px",
-    border: "5px solid transparent",
-}
-
-const chatWindowStyle = {
-    backgroundColor: window_color
-}
 
 export default Chatbot;

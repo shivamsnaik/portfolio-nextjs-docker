@@ -27,11 +27,7 @@ $max-width-calculation: calc(1020px - (30px * 2));
         margin-right: auto;
         width: $max-width-calculation;
         max-width: $max-width-calculation;
-        & *{
-          padding: 0px 20px 0 20px;
-          margin: 0;
-          flex: 0;
-        }
+        padding: 0px 20px 0 20px;
       }
     }
   }
