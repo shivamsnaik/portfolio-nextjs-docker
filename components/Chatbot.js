@@ -169,6 +169,7 @@ const Chatbot = (props) => {
                         style={{ flex: 1, display: "flex", height: "50px" }}
                     >
                         <input
+                            className={styles.chatInput}
                             style={{
                                 height: "100%",
                                 overflowWrap: "break-word",
