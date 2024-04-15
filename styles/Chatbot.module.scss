@@ -1,11 +1,13 @@
-$chat-window-background: white;
+$chat-window-background: whitesmoke;
+$border: 3px solid white;
+
 .chatbotWindow{
     display: flex;
     flex-direction: row;
-    background-color: $chat-window-background;
     flex: 1;
-    max-height: 500px;
-    padding: 20px;
+    margin: 20px 0;
+    //max-height: 500px;
+    //padding: 20px;
 
 
     & .chatbotContents{
@@ -16,12 +18,49 @@ $chat-window-background: white;
         padding: 10px;
         display: flex;
         align-items: flex-end;
-        background-color: black;
+        background-color: $chat-window-background;
+
+        & .chatInputs{
+            flex: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 4px 0px 0px 0px;
+            padding: 5px;
+            background-color: white;
+
+            & .chatForm {
+                & .submitBtn {
+                    flex: 1;
+                    max-width: 50px;
+                    height: 50px;
+                    border: 0;
+                }
+            }
+        }
+
+        & .chatBubbles{
+            width: 100%;
+            overflow-y: scroll;
+            flex: 1;
+            display: flex;
+            flex-direction: column-reverse;
+            //margin: 0px;
+            //padding: 10px;
+            background-color: white;
+            border: $border;
+        }
+
+        & #input-selection{
+            border-radius: 10px;
+            border: 1px solid slategrey ;
+        }
     }
 
     & .chatbotTypes{
         border: 1px solid white;
-        display: flex;
+        display: none;
         flex: 1 1;
         flex-direction: column;
         justify-content: center;
@@ -36,6 +75,8 @@ $chat-window-background: white;
 
 @media (max-width: 810px) {
     .chatbotWindow{
+        margin: 0px;
+        padding: 0px;
         flex-direction: column;
         & .chatbotTypes{
             flex: 0;

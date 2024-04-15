@@ -96,16 +96,8 @@ const Chatbot = (props) => {
             >
                 <div
                     id="chat-bubbles"
+                    className={styles.chatBubbles}
                     style={{
-                        width: "100%",
-                        overflowY: "scroll",
-                        flex: 1,
-                        display: "flex",
-                        flexDirection: "column-reverse",
-                        margin: "0px",
-                        padding: "10px",
-                        backgroundColor: `white`,
-                        border: `3px solid ${props.backgroundColor}`,
                         borderRadius: `${props.radius}px`,
                     }}
                 >
@@ -166,21 +158,15 @@ const Chatbot = (props) => {
                 </div>
                 <div
                     id="input-section"
+                    className={styles.chatInputs}
                     style={{
-                        flex: 0,
-                        width: "100%",
-                        display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "space-between",
-                        margin: "4px 0px 0px 0px",
-                        padding: "5px",
-                        backgroundColor: `${props.backgroundColor}`,
                         borderRadius: `${props.radius}px`,
                     }}
                 >
                     <form
+                        className={styles.chatForm}
                         onSubmit={getResponseToQuestion}
-                        style={{ flex: 1, display: "flex" }}
+                        style={{ flex: 1, display: "flex", height: "50px" }}
                     >
                         <input
                             style={{
@@ -202,14 +188,15 @@ const Chatbot = (props) => {
                         />
                         <button
                             style={{
-                                flex: 0,
                                 borderRadius: `${props.radius}px`,
                                 fontSize: `${props.fontSize}px`,
                             }}
-                            className="btn3"
+                            className={styles.submitBtn}
                             type="submit"
                         >
-                            Enter
+                            <svg width="25px" height="25px" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.143 2.153a1 1 0 011.715 0l3.999 6.665a1 1 0 01-.858 1.515H2.001a1 1 0 01-.858-1.515l4-6.665z"/>
+                            </svg>
                         </button>
                     </form>
                 </div>

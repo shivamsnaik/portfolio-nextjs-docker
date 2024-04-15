@@ -148,6 +148,15 @@ $max-width-calculation: calc(1020px - (30px * 2));
 }
 
 @media (max-width: 600px) {
+  .container {  
+    & .sub_container {
+      & .content_wrapper {
+        & .page_content{
+          padding: 0px;
+        }
+      }
+    }
+  }
   .grid {
     width: 100%;
     flex-direction: column;

@@ -5,7 +5,6 @@ const Projects = () => {
 
     return(
         <Page>
-            <h1>Projects</h1>
             <Chatbot radius="5"/>
         </Page>
     );
